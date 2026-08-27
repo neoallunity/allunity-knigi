@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/allunity.css">
+    <meta name="author" content="Интегральное сообщество">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allunity.ru:443/">
+    <meta property="og:title" content="Интегральное сообщество">
+    <meta property="og:description" content="посвящен консолидации всех конструктивных сил – людей и сообществ, которые исходят из принципов интегральной философии">
+    <meta property="og:image" content="http://allunity.ru/img/logo_original.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="AllUnity" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <!-- Предзагрузка критических ресурсов -->
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/js/script.min.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" as="style">
+    
+    <!-- Критические стили встроены напрямую для быстрого рендеринга -->
+    <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;margin:0;padding:0;background:#f8fafc}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 1rem}
+    nav{background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);position:sticky;top:0;z-index:50}
+    .hidden{display:none}
+    @media (max-width:768px){.md\:flex{display:none}}
+    </style>
+    
+    <!-- Отложенная загрузка стилей -->
+    <link rel="stylesheet" href="/css/style.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Запасной вариант, если JavaScript отключен -->
+    <noscript>
+        <link rel="stylesheet" href="/css/style.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    </noscript>
+    
+    <!-- Предварительная загрузка Tailwind -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+<!-- Header end-->
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интегральное Сообщество - Библиотека Документов</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#0ea5e9',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .folder-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .folder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .document-card {
+            transition: all 0.3s ease;
+        }
+        
+        .document-card:hover {
+            background-color: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .nav-link:hover::after {
+            background-color: #3b82f6;
+        }
+        
+        .active::after {
+            width: 100%;
+            left: 0;
+            background-color: #3b82f6;
+        }
+        
+        .filter-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .filter-section.active {
+            max-height: 500px;
+        }
+        
+        .document-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <link rel="stylesheet" href="/include/cute.css">
+<!--    <base target="_blank">  -->
+<!-- Matomo -->
+<!--
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//allunity.ru/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+-->
+<!-- End Matomo Code -->
+
+<!-- Menu begin -->
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <a href="https://allunity.ru/emblem.shtml" class="flex items-center">
+                        <img src="https://allunity.ru/img/logo3D2.webp" alt="Логотип Интегрального сообщества" class="h-16 w-16 rounded-full border-2 border-white">
+                        <span class="ml-3 title-font text-xl font-bold">Интегральное сообщество</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/index.shtml" class="nav-link text-indigo-800 font-medium">Главная</a>
+                    <a href="/news.shtml" class="nav-link text-gray-600 hover:text-indigo-600">Новости</a>
+                    <a href="/codex.shtml" class="nav-link text-gray-600 hover:text-indigo-600">Кодекс</a>
+                    <a href="/institute.shtml" class="nav-link text-gray-600 hover:text-indigo-600">ИИН</a>
+                    <a href="/journal.shtml" class="nav-link text-gray-600 hover:text-indigo-600">Журнал</a>
+                    <a href="/forum.shtml" class="nav-link text-gray-600 hover:text-indigo-600">Форум</a>
+                    <a href="/library.shtml" class="nav-link text-gray-600 hover:text-indigo-600">Библиотека</a>
+                    <a href="/search.shtml" class="nav-link text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-search mr-1"></i>Поиск
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button class="nav-link text-gray-600 hover:text-indigo-600 flex items-center">
+                            Ещё <i class="fas fa-chevron-down ml-1"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="/discussions.shtml" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Дискуссии</a>
+                            <a href="/dictionary.shtml" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Словарь</a>
+                            <a href="/emblem.shtml" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Эмблема</a>
+                            <a href="/history.shtml" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">История</a>
+                            <a href="/school.shtml" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Школы</a>
+                            <a href="/projects.shtml" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Проекты</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 bg-white shadow-lg rounded-b-lg">
+                <div class="flex flex-col space-y-1">
+                    <a href="/index.shtml" class="py-3 px-4 text-indigo-800 font-medium border-l-4 border-indigo-800 bg-indigo-50">Главная</a>
+                    <a href="/news.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Новости</a>
+                    <a href="/codex.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Кодекс</a>
+                    <a href="/institute.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">ИИН</a>
+                    <a href="/journal.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Журнал</a>
+                    <a href="/forum.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Форум</a>
+                    <a href="/library.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Библиотека</a>
+                    <a href="/search.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">
+                        <i class="fas fa-search mr-2"></i>Поиск
+                    </a>
+                    <div class="border-t border-gray-200 my-2"></div>
+                    <a href="/discussions.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Дискуссии</a>
+                    <a href="/dictionary.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Словарь</a>
+                    <a href="/emblem.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Эмблема</a>
+                    <a href="/history.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">История</a>
+                    <a href="/school.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Школы</a>
+                    <a href="/projects.shtml" class="py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition-colors">Проекты</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- Menu end -->
+
+
+
+
+  <!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+
+        <div class="flex flex-col md:flex-row justify-between items-start mb-8">
+            <div>
+                <h2 class="text-3xl font-bold text-primary mb-2">Сборник материалов и документов</h2>
+                <p class="text-gray-600">Документы представлены в формате PDF для удобного просмотра и скачивания</p>
+            </div>
+        </div>
+
+
+
+ <!-- Filters -->
+             <form action="" method="get">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Показать:</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" name="F">
+                        <option value="0"> Плоский</option>
+                        <option value="1" selected="selected"> Изысканный</option>
+                        <option value="2"> Табличный</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Сортировать:</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" name="C">
+                        <option value="N" selected="selected"> Имени</option>
+                        <option value="M"> Дате модификации</option>
+                        <option value="S"> Размеру</option>
+                        <option value="D"> Описанию</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Порядок:</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" name="O">
+                        <option value="A" selected="selected"> возрастанию</option>
+                        <option value="D"> убыванию</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Версии:</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"  name="V">
+                        <option value="0" selected="selected"> в нормальном порядке</option>
+                        <option value="1"> в порядке версий</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="flex items-center bg-white rounded-lg shadow px-4 py-2">
+                    <span class="mr-2 text-gray-600">Фильтры:<input type="text" name="P" value="*" /></span>
+                </div>
+
+
+                
+                <div class="mt-4 flex justify-end">
+                    <button class="bg-primary hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition">
+                        
+                    <i class="fas fa-filter mr-2"></i> <input type="submit" name="X" value="Применить фильтры" />
+
+                    </button>
+                </div>
+
+            </form>
+    
+
+   <table id="indexlist">
+   <tr class="indexhead"><th class="indexcolicon"><img src="/icons/blank.gif" alt="[ICO]" width="30" height="30"></th><th class="indexcolname"><a href="?C=N;O=A">Name</a></th><th class="indexcolsize"><a href="?C=S;O=A">Size</a></th><th class="indexcoldesc"><a href="?C=D;O=A">Description</a></th></tr>
+   <tr class="indexbreakrow"><th colspan="4"><hr></th></tr>
+   <tr class="even"><td class="indexcolicon"><a href="/DOCS/"><img src="/icons/back.gif" alt="[PARENTDIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="/DOCS/">Parent Directory</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="Logic%20of%20Good/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="Logic%20of%20Good/">Logic of Good/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="Good/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="Good/">Good/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="./%d0%a7%d0%b5%d0%bb%d0%be%d0%b2%d0%b5%d0%ba%20%d0%b8%20%d0%9e%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%be:%20%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d1%8b%20%d1%81%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a2%d0%be%d0%bc%202/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="./%d0%a7%d0%b5%d0%bb%d0%be%d0%b2%d0%b5%d0%ba%20%d0%b8%20%d0%9e%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%be:%20%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d1%8b%20%d1%81%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a2%d0%be%d0%bc%202/">Человек и Общество: образы синтеза Том 2/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="./%d0%a7%d0%b5%d0%bb%d0%be%d0%b2%d0%b5%d0%ba%20%d0%b8%20%d0%9e%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%be:%20%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d1%8b%20%d1%81%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a2%d0%be%d0%bc%201/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="./%d0%a7%d0%b5%d0%bb%d0%be%d0%b2%d0%b5%d0%ba%20%d0%b8%20%d0%9e%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%be:%20%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d1%8b%20%d1%81%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a2%d0%be%d0%bc%201/">Человек и Общество: образы синтеза Том 1/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="%d0%9b%d0%be%d0%b3%d0%b8%d0%ba%d0%b0%20%d0%9e%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%be%d0%b3%d0%be%20%d0%a1%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a1%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0%20%d0%9f%d1%80%d0%b8%d1%80%d0%be%d0%b4%d0%b0%20%d0%94%d1%83%d1%88%d0%b0%20%d0%9a%d0%bd%d0%b8%d0%b3%d0%b0%20%d0%bf%d0%b5%d1%80%d0%b2%d0%b0%d1%8f/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="%d0%9b%d0%be%d0%b3%d0%b8%d0%ba%d0%b0%20%d0%9e%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%be%d0%b3%d0%be%20%d0%a1%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a1%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0%20%d0%9f%d1%80%d0%b8%d1%80%d0%be%d0%b4%d0%b0%20%d0%94%d1%83%d1%88%d0%b0%20%d0%9a%d0%bd%d0%b8%d0%b3%d0%b0%20%d0%bf%d0%b5%d1%80%d0%b2%d0%b0%d1%8f/">Логика Открытого Синтеза Структура Природа Душа Книга первая/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="%d0%9b%d0%be%d0%b3%d0%b8%d0%ba%d0%b0%20%d0%9e%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%be%d0%b3%d0%be%20%d0%a1%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a1%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0%20%d0%9f%d1%80%d0%b8%d1%80%d0%be%d0%b4%d0%b0%20%d0%94%d1%83%d1%88%d0%b0%20%d0%9a%d0%bd%d0%b8%d0%b3%d0%b0%20%d0%b2%d1%82%d0%be%d1%80%d0%b0%d1%8f/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="%d0%9b%d0%be%d0%b3%d0%b8%d0%ba%d0%b0%20%d0%9e%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%be%d0%b3%d0%be%20%d0%a1%d0%b8%d0%bd%d1%82%d0%b5%d0%b7%d0%b0%20%d0%a1%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0%20%d0%9f%d1%80%d0%b8%d1%80%d0%be%d0%b4%d0%b0%20%d0%94%d1%83%d1%88%d0%b0%20%d0%9a%d0%bd%d0%b8%d0%b3%d0%b0%20%d0%b2%d1%82%d0%be%d1%80%d0%b0%d1%8f/">Логика Открытого Синтеза Структура Природа Душа Книга вторая/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="%d0%98%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d0%bb%d0%b8%d0%ba%d0%b0.%20%d0%9f%d1%83%d1%82%d0%b8%20%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d1%8f%20%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d0%b9%20%d0%ba%d0%b0%d1%80%d1%82%d0%b8%d0%bd%d1%8b%20%d0%bc%d0%b8%d1%80%d0%b0%20/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="%d0%98%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d0%bb%d0%b8%d0%ba%d0%b0.%20%d0%9f%d1%83%d1%82%d0%b8%20%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d1%8f%20%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d0%b9%20%d0%ba%d0%b0%d1%80%d1%82%d0%b8%d0%bd%d1%8b%20%d0%bc%d0%b8%d1%80%d0%b0%20/">Интегралика. Пути построения полной картины мира /</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="./%d0%98%d0%9d%d0%a2%d0%95%d0%93%d0%a0%d0%90%d0%9b%d0%98%d0%9a%d0%90:%d0%9e%d0%a2%20%d0%9f%d0%a0%d0%95%d0%94%d0%a1%d0%a2%d0%90%d0%92%d0%9b%d0%95%d0%9d%d0%98%d0%af%20%d0%9e%20%d0%9f%d0%9e%d0%9b%d0%9d%d0%9e%d0%a2%d0%95%20%d0%9a%20%d0%98%d0%9d%d0%a2%d0%95%d0%93%d0%a0%d0%90%d0%9b%d0%ac%d0%9d%d0%9e-%d0%9a%d0%92%d0%90%d0%9d%d0%a2%d0%9e%d0%92%d0%9e%d0%99%20%d0%9a%d0%90%d0%a0%d0%a2%d0%98%d0%9d%d0%95%20%d0%9c%d0%98%d0%a0%d0%90/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="./%d0%98%d0%9d%d0%a2%d0%95%d0%93%d0%a0%d0%90%d0%9b%d0%98%d0%9a%d0%90:%d0%9e%d0%a2%20%d0%9f%d0%a0%d0%95%d0%94%d0%a1%d0%a2%d0%90%d0%92%d0%9b%d0%95%d0%9d%d0%98%d0%af%20%d0%9e%20%d0%9f%d0%9e%d0%9b%d0%9d%d0%9e%d0%a2%d0%95%20%d0%9a%20%d0%98%d0%9d%d0%a2%d0%95%d0%93%d0%a0%d0%90%d0%9b%d0%ac%d0%9d%d0%9e-%d0%9a%d0%92%d0%90%d0%9d%d0%a2%d0%9e%d0%92%d0%9e%d0%99%20%d0%9a%d0%90%d0%a0%d0%a2%d0%98%d0%9d%d0%95%20%d0%9c%d0%98%d0%a0%d0%90/">ИНТЕГРАЛИКА:ОТ ПРЕДСТАВЛЕНИЯ О ПОЛНОТЕ К ИНТЕГРАЛЬНО-КВАНТОВОЙ КАРТИНЕ МИРА/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="%d0%92%d1%81%d1%91%20%d0%b8%d0%b7%20%d0%bd%d0%b8%d1%87%d0%b5%d0%b3%d0%be.%20%d0%9e%d1%81%d0%bd%d0%be%d0%b2%d1%8b%20%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be%20%d0%b2%d1%8b%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d1%8f%20%d0%bc%d0%b8%d1%80%d0%b0/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="%d0%92%d1%81%d1%91%20%d0%b8%d0%b7%20%d0%bd%d0%b8%d1%87%d0%b5%d0%b3%d0%be.%20%d0%9e%d1%81%d0%bd%d0%be%d0%b2%d1%8b%20%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be%20%d0%b2%d1%8b%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d1%8f%20%d0%bc%d0%b8%d1%80%d0%b0/">Всё из ничего. Основы интегрального выведения мира/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="%d0%91%d0%be%d0%b3%20%d0%b8%20%d1%80%d0%b0%d0%b7%d1%83%d0%bc/"><img src="/icons/folder.gif" alt="[DIR]" width="30" height="30"></a></td><td class="indexcolname"><a href="%d0%91%d0%be%d0%b3%20%d0%b8%20%d1%80%d0%b0%d0%b7%d1%83%d0%bc/">Бог и разум/</a></td><td class="indexcolsize">  - </td><td class="indexcoldesc"><span class='description'></span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="Shashkov_Monograf_blok_v3.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="Shashkov_Monograf_blok_v3.pdf">Shashkov_Monograf_blok_v3.pdf</a></td><td class="indexcolsize">2.4M</td><td class="indexcoldesc"><span class='description'>ИНТЕГРАЛИКА:ОТ ПРЕДСТАВЛЕНИЯ О ПОЛНОТЕ К ИНТЕГРАЛЬНО-КВАНТОВОЙ КАРТИНЕ МИРА</span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="Moiseev_Book_tom2.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="Moiseev_Book_tom2.pdf">Moiseev_Book_tom2.pdf</a></td><td class="indexcolsize">3.5M</td><td class="indexcoldesc"><span class='description'>Человек и Общество: образы синтеза Том 2</span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="Moiseev_Book_tom1.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="Moiseev_Book_tom1.pdf">Moiseev_Book_tom1.pdf</a></td><td class="indexcolsize">3.6M</td><td class="indexcoldesc"><span class='description'>Человек и Общество: образы синтеза Том 1</span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="LOS_1_2.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="LOS_1_2.pdf">LOS_1_2.pdf</a></td><td class="indexcolsize">3.2M</td><td class="indexcoldesc"><span class='description'>В. И. Моисеев Логика Открытого Синтеза Структура Природа Душа Книга вторая</span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="LOS_1_1.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="LOS_1_1.pdf">LOS_1_1.pdf</a></td><td class="indexcolsize">5.2M</td><td class="indexcoldesc"><span class='description'>В. И. Моисеев Логика Открытого Синтеза Структура Природа Душа Книга первая</span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="LOGVS.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="LOGVS.pdf">LOGVS.pdf</a></td><td class="indexcolsize">2.8M</td><td class="indexcoldesc"><span class='description'>В. И. МОИСЕЕВ ЛОГИКА ВСЕЕДИНСТВА </span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="JustGood.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="JustGood.pdf">JustGood.pdf</a></td><td class="indexcolsize"> 68K</td><td class="indexcoldesc"><span class='description'>Logic of Good</span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="Integralika.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="Integralika.pdf">Integralika.pdf</a></td><td class="indexcolsize">1.6M</td><td class="indexcoldesc"><span class='description'>Интегралика. Пути построения полной картины мира </span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="Good.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="Good.pdf">Good.pdf</a></td><td class="indexcolsize">3.3M</td><td class="indexcoldesc"><span class='description'>Формат переносимых документов Adobe</span></td></tr>
+   <tr class="even"><td class="indexcolicon"><a href="Book-God.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="Book-God.pdf">Book-God.pdf</a></td><td class="indexcolsize">696K</td><td class="indexcoldesc"><span class='description'>Бог и разум</span></td></tr>
+   <tr class="odd"><td class="indexcolicon"><a href="Book-All.pdf"><img src="/icons/layout.gif" alt="[   ]" width="30" height="30"></a></td><td class="indexcolname"><a href="Book-All.pdf">Book-All.pdf</a></td><td class="indexcolsize">1.2M</td><td class="indexcoldesc"><span class='description'>Всё из ничего. Основы интегрального выведения мира</span></td></tr>
+   <tr class="indexbreakrow"><th colspan="4"><hr></th></tr>
+</table>
+<!-- Additional Info -->
+
+
+
+
+
+
+
+<div>
+        <!-- Info Section -->
+        <div class="mt-12 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 class="text-xl font-bold text-dark mb-4">О коллекции документов</h2>
+            <p class="text-gray-700 mb-4">
+                Этот каталог содержит материалы по интегральной физике, философии и математике. 
+                Документы представлены в формате PDF для удобного просмотра и скачивания.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PDF</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Учебные материалы</span>
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Интегральная физика</span>
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Философия</span>
+            </div>
+        </div>
+
+    <!-- Contribute -->
+      <section class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl shadow-md p-8 text-white">
+                    <h2 class="text-2xl font-bold mb-6 text-center">Внесите свой вклад в библиотеку</h2>
+
+                    <p class="mb-8 text-center max-w-3xl mx-auto">
+                        Если у вас есть материалы, которые могут быть интересны читателям нашей библиотеки, мы приглашаем вас поделиться ими с сообществом. Это могут быть статьи, книги, исследования или другие публикации, связанные с интегральным подходом.
+                    </p>
+
+                    <div class="flex justify-center">
+                        <a href="contribute.html" class="bg-white text-indigo-600 hover:bg-gray-100 py-3 px-8 rounded-lg font-semibold transition-colors">
+                            Предложить материал
+                        </a>
+                    </div>
+     </section>
+</div><
+
+</main>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <img src="https://allunity.ru/img/logo.png" alt="Логотип Интегрального сообщества" class="w-16 h-16 mr-4">
+                        Интегральное сообщество
+                    </h3>
+                    <p class="text-gray-400">
+                        Консолидация всех конструктивных сил на основе принципов интегральной философии.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Основные разделы</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/codex.shtml" class="text-gray-400 hover:text-white transition">Интегральный кодекс</a></li>
+                        <li><a href="/institute.shtml" class="text-gray-400 hover:text-white transition">Институт ИИН</a></li>
+                        <li><a href="/journal.shtml" class="text-gray-400 hover:text-white transition">Журнал</a></li>
+                        <li><a href="/news.shtml" class="text-gray-400 hover:text-white transition">Новости</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Ресурсы</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/library.shtml" class="text-gray-400 hover:text-white transition">Библиотека</a></li>
+                        <li><a href="/forum.shtml" class="text-gray-400 hover:text-white transition">Форум</a></li>
+                        <li><a href="/dictionary.shtml" class="text-gray-400 hover:text-white transition">Словарь</a></li>
+                        <li><a href="/history.shtml" class="text-gray-400 hover:text-white transition">История</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-indigo-400"></i>
+                            <a href="mailto:info@allunity.ru" class="text-gray-400 hover:text-white transition">info@allunity.ru</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe mr-2 text-indigo-400"></i>
+                            <span class="text-gray-400">allunity.ru</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p><a href="https://u0173845:Allunity1!!@webstat.allunity.ru/index.html">Интегральное сообщество <span class="font-effect-fire-animation" style="font-size:20px; font-family:Sonsie One;"> © </span> 2015-
+                
+                Thursday 27 August, 2026
+                </a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/load-optimizer.js" async></script>
+    <script src="/js/script.min.js" defer></script>
+    <script src="/js/allunity.js"></script>
+</body>
+</html>
+
+
+
